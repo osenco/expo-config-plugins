@@ -3,24 +3,23 @@ module.exports = {
         "browser": true,
         "es2021": true
     },
-    "extends": ["standard-with-typescript", 'jleem'],
     "overrides": [
         {
+            "files": ["src/**/*.ts"],
+            "extends": ["standard-with-typescript", "jleem"],
+            "parserOptions": {
+                "ecmaVersion": "latest",
+                "sourceType": "module"
+            }
+        },
+        {
+            "files": [".eslintrc.{js,cjs}"],
             "env": {
                 "node": true
             },
-            "files": [
-                ".eslintrc.{js,cjs}"
-            ],
             "parserOptions": {
                 "sourceType": "script"
             }
         }
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module"
-    },
-    "rules": {
-    }
+    ]
 }

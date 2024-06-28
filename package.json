@@ -7,7 +7,8 @@
     "build"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "deploy": "release-it"
   },
   "author": "JongHan Leem <jleem42@gmail.com> (https://github.com/jleem99)",
   "license": "MIT",

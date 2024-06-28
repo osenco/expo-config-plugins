@@ -28,8 +28,8 @@ const withReactNativeFirebaseIOS = (conf) => {
                     `  pod 'FirebaseCoreInternal', :modular_headers => true`,
                     `  pod 'GoogleUtilities', :modular_headers => true`,
                 ].join('\n'),
-                anchor: /flags = get_default_flags\(\)/,
-                offset: -1,
+                anchor: /use_native_modules/,
+                offset: 1,
                 comment: '  #',
             });
             yield (0, utils_1.mergeContentsAndSaveAsync)(path_1.default.join(config.modRequest.platformProjectRoot, config.modRequest.projectName, 'AppDelegate.mm'), {
@@ -50,32 +50,48 @@ const withReactNativeFirebaseIOS = (conf) => {
         }),
     ]);
 };
-const withReactNativeFirebaseAndroid = (conf) => {
-    return (0, config_plugins_1.withDangerousMod)(conf, [
+/*
+const withReactNativeFirebaseAndroid: ConfigPlugin = (conf) => {
+    return withDangerousMod(conf, [
         'android',
-        (config) => __awaiter(void 0, void 0, void 0, function* () {
-            yield (0, utils_1.mergeContentsAndSaveAsync)(path_1.default.join(config.modRequest.platformProjectRoot, 'build.gradle'), {
-                tag: `firebase-google-services-dependency`,
-                newSrc: [
-                    `        classpath('com.google.gms:google-services:4.3.15')`,
-                ].join('\n'),
-                anchor: 'dependencies {',
-                offset: 1,
-                comment: '        //',
-            });
-            yield (0, utils_1.mergeContentsAndSaveAsync)(path_1.default.join(config.modRequest.platformProjectRoot, 'app/build.gradle'), {
-                tag: `firebase-google-services-dependency`,
-                newSrc: [
-                    `apply plugin: 'com.google.gms.google-services'`,
-                ].join('\n'),
-                anchor: `apply plugin: "com.android.application"`,
-                offset: 1,
-                comment: '//',
-            });
-            return config;
-        }),
-    ]);
-};
+        async (config) => {
+            await mergeContentsAndSaveAsync(
+                path.join(
+                    config.modRequest.platformProjectRoot,
+                    'build.gradle',
+                ),
+                {
+                    tag: `firebase-google-services-dependency`,
+                    newSrc: [
+                        `        classpath('com.google.gms:google-services:4.3.15')`,
+                    ].join('\n'),
+                    anchor: 'dependencies {',
+                    offset: 1,
+                    comment: '        //',
+                },
+            )
+
+            await mergeContentsAndSaveAsync(
+                path.join(
+                    config.modRequest.platformProjectRoot,
+                    'app/build.gradle',
+                ),
+                {
+                    tag: `firebase-google-services-dependency`,
+                    newSrc: [
+                        `apply plugin: 'com.google.gms.google-services'`,
+                    ].join('\n'),
+                    anchor: `apply plugin: "com.android.application"`,
+                    offset: 1,
+                    comment: '//',
+                },
+            )
+
+            return config
+        },
+    ])
+}
+*/
 exports.default = ((config) => (0, config_plugins_1.withPlugins)(config, [
     withReactNativeFirebaseIOS /* withReactNativeFirebaseAndroid */,
 ]));

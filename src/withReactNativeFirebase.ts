@@ -21,8 +21,8 @@ const withReactNativeFirebaseIOS: ConfigPlugin = (conf) => {
 						`  pod 'FirebaseCoreInternal', :modular_headers => true`,
 						`  pod 'GoogleUtilities', :modular_headers => true`,
 					].join('\n'),
-					anchor: /flags = get_default_flags\(\)/,
-					offset: -1,
+					anchor: /use_native_modules/,
+					offset: 1,
 					comment: '  #',
 				},
 			)
@@ -62,6 +62,7 @@ const withReactNativeFirebaseIOS: ConfigPlugin = (conf) => {
 	])
 }
 
+/*
 const withReactNativeFirebaseAndroid: ConfigPlugin = (conf) => {
 	return withDangerousMod(conf, [
 		'android',
@@ -102,6 +103,7 @@ const withReactNativeFirebaseAndroid: ConfigPlugin = (conf) => {
 		},
 	])
 }
+*/
 
 export default ((config) =>
 	withPlugins(config, [

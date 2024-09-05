@@ -4,7 +4,8 @@
   "description": "A collection predefined plugins for use with @expo/config-plugins",
   "main": "index.js",
   "files": [
-    "build", "index.js"
+    "build",
+    "index.js"
   ],
   "scripts": {
     "build": "tsc",
@@ -13,21 +14,21 @@
   "author": "JongHan Leem <jleem42@gmail.com> (https://github.com/jleem99)",
   "license": "MIT",
   "devDependencies": {
-    "@commitlint/config-conventional": "^19.2.2",
-    "@evilmartians/lefthook": "^1.6.18",
-    "@expo/config-plugins": "^8.0.6",
-    "@expo/config-types": "^51.0.1",
+    "@commitlint/config-conventional": "^19.4.1",
+    "@evilmartians/lefthook": "^1.7.15",
+    "@expo/config-plugins": "^8.0.8",
+    "@expo/config-types": "^51.0.2",
     "@release-it/conventional-changelog": "^8.0.1",
-    "@types/node": "^20.14.9",
-    "@typescript-eslint/eslint-plugin": "^7.14.1",
-    "commitlint": "^19.3.0",
+    "@types/node": "^22.5.4",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "commitlint": "^19.4.1",
     "eslint": "^8.55.0",
     "eslint-config-jleem": "^1.6.4",
     "eslint-config-standard-with-typescript": "^40.0.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^17.9.0",
-    "eslint-plugin-promise": "^6.2.0",
-    "release-it": "^17.4.0",
+    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-n": "^17.10.2",
+    "eslint-plugin-promise": "^7.1.0",
+    "release-it": "^17.6.0",
     "typescript": "~5.3.2"
   },
   "commitlint": {

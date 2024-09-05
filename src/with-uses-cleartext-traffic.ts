@@ -6,7 +6,7 @@ import {
 
 const { getMainApplicationOrThrow } = AndroidConfig.Manifest
 
-const withUsesClearTextTraffic: ConfigPlugin = (config) => {
+const withUsesCleartextTraffic: ConfigPlugin = (config) => {
 	return withAndroidManifest(config, async (modConfig) => {
 		const androidManifest = modConfig.modResults
 		const mainApplication = getMainApplicationOrThrow(androidManifest)
@@ -15,4 +15,4 @@ const withUsesClearTextTraffic: ConfigPlugin = (config) => {
 	})
 }
 
-export default withUsesClearTextTraffic
+export default withUsesCleartextTraffic

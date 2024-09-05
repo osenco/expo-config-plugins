@@ -11,7 +11,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const config_plugins_1 = require("@expo/config-plugins");
 const { getMainApplicationOrThrow } = config_plugins_1.AndroidConfig.Manifest;
-const withUsesClearTextTraffic = (config) => {
+const withUsesCleartextTraffic = (config) => {
     return (0, config_plugins_1.withAndroidManifest)(config, (modConfig) => __awaiter(void 0, void 0, void 0, function* () {
         const androidManifest = modConfig.modResults;
         const mainApplication = getMainApplicationOrThrow(androidManifest);
@@ -19,4 +19,4 @@ const withUsesClearTextTraffic = (config) => {
         return modConfig;
     }));
 };
-exports.default = withUsesClearTextTraffic;
+exports.default = withUsesCleartextTraffic;

@@ -4,8 +4,7 @@
   "description": "A collection predefined plugins for use with @expo/config-plugins",
   "main": "index.js",
   "files": [
-    "build",
-    "index.js"
+    "lib"
   ],
   "scripts": {
     "build": "tsc",

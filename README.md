@@ -35,7 +35,7 @@ In your project's `app.json` or `app.config.js`, add the respective plugin confi
   "expo": {
     "plugins": [
       [
-        "expo-config-plugins/with-google-maps",
+        "expo-config-plugins/lib/with-google-maps",
         {
           "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
         }
@@ -53,7 +53,7 @@ Replace `YOUR_GOOGLE_MAPS_API_KEY` with your actual Google Maps API key.
 {
   "expo": {
     "plugins": [
-      "expo-config-plugins/with-react-native-firebase"
+      "expo-config-plugins/lib/with-react-native-firebase"
     ]
   }
 }
@@ -65,7 +65,7 @@ Replace `YOUR_GOOGLE_MAPS_API_KEY` with your actual Google Maps API key.
 {
   "expo": {
     "plugins": [
-      "expo-config-plugins/with-uses-cleartext-traffic"
+      "expo-config-plugins/lib/with-uses-cleartext-traffic"
     ]
   }
 }

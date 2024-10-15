@@ -1,5 +1,5 @@
 {
-  "name": "expo-config-plugins",
+  "name": "@osenco/expo-config-plugins",
   "version": "0.1.2",
   "description": "A collection predefined plugins for use with @expo/config-plugins",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "build": "tsc",
     "deploy": "release-it"
   },
-  "author": "JongHan Leem <jleem42@gmail.com> (https://github.com/jleem99)",
+  "author": "Osen Concepts <hi@osen.co.ke> (https://github.com/osenco)",
   "license": "MIT",
   "devDependencies": {
     "@commitlint/config-conventional": "^19.4.1",

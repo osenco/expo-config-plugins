@@ -9,7 +9,7 @@ Expo Config Plugins enable you to customize and extend the native behavior of an
 ### Included Plugins
 
 1. **Google Maps Integration**
-2. **React Native Firebase Integration**
+2. **Camera uses-feature on Android**
 3. **Enabling usesClearTextTraffic (Android)**
 
 ## Setup
@@ -35,7 +35,7 @@ In your project's `app.json` or `app.config.js`, add the respective plugin confi
   "expo": {
     "plugins": [
       [
-        "expo-config-plugins/lib/with-google-maps",
+        "@osenco/expo-config-plugins/lib/with-google-maps",
         {
           "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
         }
